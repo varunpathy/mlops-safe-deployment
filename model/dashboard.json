@@ -8,9 +8,9 @@
       "height": 7,
       "properties": {
         "metrics": [
-          [ { "expression": "SEARCH('{/aws/sagemaker/Endpoints,EndpointName,VariantName} MetricName=\"CPUUtilization\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "CPU Utilization", "id": "e1", "region": "ap-southeast-2" } ]
+          [ { "expression": "SEARCH('{/aws/sagemaker/Endpoints,EndpointName,VariantName} MetricName=\"CPUUtilization\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "CPU Utilization", "id": "e1", "region": "us-east-1" } ]
         ],
-        "region": "ap-southeast-2",
+        "region": "us-east-1",
         "title": "SageMaker CPUUtilization",
         "period": 300,
         "view": "timeSeries",
@@ -26,9 +26,9 @@
       "height": 7,
       "properties": {
         "metrics": [
-          [ { "expression": "SEARCH('{/aws/sagemaker/Endpoints,EndpointName,VariantName} MetricName=\"MemoryUtilization\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "MemoryUtilization", "id": "e1", "region": "ap-southeast-2" } ]
+          [ { "expression": "SEARCH('{/aws/sagemaker/Endpoints,EndpointName,VariantName} MetricName=\"MemoryUtilization\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "MemoryUtilization", "id": "e1", "region": "us-east-1" } ]
         ],
-        "region": "ap-southeast-2",
+        "region": "us-east-1",
         "title": "SageMaker MemoryUtilization",
         "period": 300,
         "view": "timeSeries",
@@ -46,7 +46,7 @@
         "metrics": [
           [ { "expression": "SEARCH('{/aws/sagemaker/Endpoints,EndpointName,VariantName} MetricName=\"DiskUtilization\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "DiskUtilization", "id": "e1" } ]
         ],
-        "region": "ap-southeast-2",
+        "region": "us-east-1",
         "title": "SageMaker DiskUtilization",
         "period": 300,
         "view": "timeSeries",
@@ -62,12 +62,12 @@
       "height": 7,
       "properties": {
         "metrics": [
-          [ { "expression": "SEARCH('{AWS/SageMaker,EndpointName,VariantName} MetricName=\"Invocation4XXErrors\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "Invocation4XXErrors", "id": "e3", "region": "ap-southeast-2" } ],
-          [ { "expression": "SEARCH('{AWS/SageMaker,EndpointName,VariantName} MetricName=\"Invocation5XXErrors\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "Invocation5XXErrors", "id": "e4", "region": "ap-southeast-2" } ]
+          [ { "expression": "SEARCH('{AWS/SageMaker,EndpointName,VariantName} MetricName=\"Invocation4XXErrors\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "Invocation4XXErrors", "id": "e3", "region": "us-east-1" } ],
+          [ { "expression": "SEARCH('{AWS/SageMaker,EndpointName,VariantName} MetricName=\"Invocation5XXErrors\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "Invocation5XXErrors", "id": "e4", "region": "us-east-1" } ]
         ],
         "view": "timeSeries",
         "stacked": false,
-        "region": "ap-southeast-2",
+        "region": "us-east-1",
         "stat": "Average",
         "period": 300,
         "title": "SageMaker Errors"
@@ -86,7 +86,7 @@
         ],
         "view": "timeSeries",
         "stacked": false,
-        "region": "ap-southeast-2",
+        "region": "us-east-1",
         "stat": "Average",
         "period": 300,
         "title": "SageMaker Latency"
@@ -100,12 +100,12 @@
       "height": 7,
       "properties": {
         "metrics": [
-          [ { "expression": "SEARCH('{AWS/SageMaker,EndpointName,VariantName} MetricName=\"Invocations\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "Invocations", "id": "e1", "region": "ap-southeast-2" } ],
-          [ { "expression": "SEARCH('{AWS/SageMaker,EndpointName,VariantName} MetricName=\"InvocationsPerInstance\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "InvocationsPerInstance", "id": "e3", "region": "ap-southeast-2", "yAxis": "right" } ]
+          [ { "expression": "SEARCH('{AWS/SageMaker,EndpointName,VariantName} MetricName=\"Invocations\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "Invocations", "id": "e1", "region": "us-east-1" } ],
+          [ { "expression": "SEARCH('{AWS/SageMaker,EndpointName,VariantName} MetricName=\"InvocationsPerInstance\" VariantName=\"prd-$MODEL_NAME\"', 'Average', 300)", "label": "InvocationsPerInstance", "id": "e3", "region": "us-east-1", "yAxis": "right" } ]
         ],
         "view": "timeSeries",
         "stacked": false,
-        "region": "ap-southeast-2",
+        "region": "us-east-1",
         "stat": "Average",
         "period": 300,
         "title": "SageMaker Invocations"
@@ -124,7 +124,7 @@
           [ "...", "CodeDeployHook_mlops-$MODEL_NAME-PreTrafficLambdaFunction", { "stat": "Sum", "label": "PreTrafficLambdaFunction" } ],
           [ { "expression": "SUM(METRICS())", "label": "Total Invocations", "yAxis": "right" } ]
         ],
-        "region": "ap-southeast-2",
+        "region": "us-east-1",
         "title": "Lambda Invocations"
       }
     },
@@ -141,7 +141,7 @@
           [ "...", "CodeDeployHook_mlops-$MODEL_NAME-PreTrafficLambdaFunction", { "stat": "Sum", "label": "PreTrafficLambdaFunction" } ],
           [ { "expression": "SUM(METRICS())", "label": "Total Errors", "yAxis": "right" } ]
         ],
-        "region": "ap-southeast-2",
+        "region": "us-east-1",
         "title": "Lambda Errors"
       }
     },
@@ -158,7 +158,7 @@
           [ "...", "CodeDeployHook_mlops-$MODEL_NAME-PreTrafficLambdaFunction", { "stat": "Average", "label": "PreTrafficLambdaFunction" } ],
           [ { "expression": "AVG(METRICS())", "label": "Average Duration", "yAxis": "right" } ]
         ],
-        "region": "ap-southeast-2",
+        "region": "us-east-1",
         "title": "Lambda Duration (average)"
       }
     },
@@ -172,7 +172,7 @@
         "title": "SageMaker Monitoring Alarm",
         "annotations": {
           "alarms": [
-            "arn:aws:cloudwatch:ap-southeast-2:691313291965:alarm:mlops-$MODEL_NAME-metric-gt-threshold"
+            "arn:aws:cloudwatch:us-east-1:929911052415:alarm:mlops-$MODEL_NAME-metric-gt-threshold"
           ]
         },
         "view": "timeSeries",
@@ -206,7 +206,7 @@
         "title": "CodeDeploy Alias Alarm",
         "annotations": {
           "alarms": [
-            "arn:aws:cloudwatch:ap-southeast-2:691313291965:alarm:mlops-$MODEL_NAME-alias-gt-zero"
+            "arn:aws:cloudwatch:us-east-1:929911052415:alarm:mlops-$MODEL_NAME-alias-gt-zero"
           ]
         },
         "view": "timeSeries",
