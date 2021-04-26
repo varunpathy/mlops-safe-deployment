@@ -10,7 +10,7 @@ from crhelper import CfnResource
 logger = logging.getLogger(__name__)
 sm = boto3.client("sagemaker")
 
-# cfnhelper makes it easier to implement a CloudFormation custom resource
+# cfnhelper makes it easier to implement a CloudFormation custom resource with status
 helper = CfnResource()
 
 # CFN Handlers

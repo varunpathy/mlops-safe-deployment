@@ -302,7 +302,7 @@ Resources:
   DeployPipeline:
     Type: "AWS::CodePipeline::Pipeline"
     Properties:
-      Name: !Sub ${ModelName}
+      Name: !Sub ${ModelName}-mlops
       RoleArn: !GetAtt PipelineRole.Arn
       ArtifactStore:
         Type: S3
